@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        .error{
+            color:red;
+            font-size:4px;
+        }
+    </style>
+</head>
+<body>
+    
+<form action="" >
+    <div>
+        Name:<input type="name" name="name" id="name">
+        <span id="nameError" class="error"></span>
+    </div>
+    <div>
+        E-mail:<input type="email" name="email" id="email">
+        <span id="emailError" class="error"></span>
+    </div>
+    <div>
+        Password:<input type="password" name="password" id="password">
+        <span id="passwordError" class="error"></span>
+    </div>
+    <input type="submit" value="submit" class="submit">
+</form>
+
+<script>
+    function validateform(){
+        const nameInput=document.getElementById("name");
+        const emailInput=document.getElementById("email");
+
+        const nameError=document.getElementById("nameError");
+        const emailError=document.getElementById("emailError");
+
+        // .var name=nameInput.value();
+
+        let isValid = true;
+
+        //clear any previous error message
+        nameError.texContent = "";
+        emailError.textContent = "";
+
+        //validate name field
+        if(nameInput.value.trim() == ""){
+            nameError.textContent = "Name is required";
+            isValid = false;
+        }
+        // else(name.length <= 5) 
+        // {
+        //   alert("Length of name should be atleast 6");
+        //   nameInput.focus();
+        //   return false;
+        // }
+        //proced with form submission if validation passes.
+        return isValid;
+    }
+
+    const form = document.querySelector("form");
+    form.addEventListener("Submit",function(event){
+        event.preventDefault();//prevent form submission
+        if(validateform()){
+            //valid form,process with submission or other actions
+            console.log("form is valid");
+        }
+        else{
+            //invalid form,display errors
+            console.log("Invalid")
+        }
+    });
+
+
+
+</script>
+</body>
+</html>
