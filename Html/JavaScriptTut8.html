@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listner</title>
+    <style>
+        #btn {
+            padding: 10px 14px;
+            background-color: red;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- /*Browser Events
+Click
+ContextMenu
+MouseOver/MouseOut
+Mousedown/MouseUp
+
+submit
+focus
+
+DOMcontextLoaded
+
+transitioned*/ -->
+
+    <div>
+        <div class="container">
+            <h1>This is Events and Listening to Events Tutorial</h1>
+            <p id="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempore praesentium maiores quod ducimus itaque inventore est sed voluptate molestiae quisquam!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, dolores.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam eos accusantium officia blanditiis
+                iste?
+            </p>
+        </div>
+        <button id="btn" onClick="toggleHide()">Show/Hide</button>
+        <script>
+            let para = document.getElementById('para');
+            para.addEventListener('mouseover', function run() {
+                alert('Mouse Inside Paragraph')
+            });
+
+            para.addEventListener('mouseout', function run() {
+                alert("Mouse Outside")
+            });
+
+            function toggleHide() {
+                let btn = document.getElementById('btn')
+                let para = document.getElementById('para');
+                //para.style.display='none'; //to hide and show // to change css
+                if (para.style.display != 'none') {
+                    para.style.display = 'none'
+                }
+                else {
+                    para.style.display = 'block'
+                }
+            }
+        </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and objects</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let employee={
+            name:'Gaurab',
+            salary:25,
+            channel:'Gk',
+            chanel2:'asdf'
+        }
+        console.log(employee)
+        //accessing objects
+        console.log(employee.salary);  //method 1
+        //method 2
+        console.log(employee['channel']);
+        //if there is a space betwwn txt so method 2 is used for accessing objects
+        
+        //console.log(employee.chanel 2); this will not run as there is space 
+        console.log(employee['chanel 2']) // it will run when there is space
+       
+       
+     //create as array
+        // let names=[1,7,4,"Harry"];
+        // console.log(names[1]);
+
+        //to create array as object we use new
+        // let name1=new Array(1,3,4,"hsf",undefined);
+        // console.log(names[1]);
+        // console.log(names.length);
+
+        // names=names.sort();
+        // console.log(names);
+
+        //inssert and delete in array
+        // names.push("This is pushed")
+
+        let arr= new Array(23); //array with 23 element.
+        arr.push("Inserted")
+        console.log(arr)
+        console.log(arr[23])
+
+    </script>
+</body>
+</html>

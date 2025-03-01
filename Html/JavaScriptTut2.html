@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is String Tutorial</h1>
+        <div id="content"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, corrupti?</p>
+    </div>
+
+    <script>
+        var string= "Thi's";
+        var name='is';
+        var message='JavaScript';
+        var country="India"
+        var capital="Delhi"
+        //template literals (inside this we can use both ' ' and "")
+        var temp =`${country} capital is ${capital}`
+        console.log("Concatenation of string " + string + name + message)
+        console.log(temp)
+        var len=string.length;
+        console.log(`Length of String is ${len}`);
+        //Escape Sequence character
+        console.log("This is Escape \n Sequence Character")
+
+        //String using costructor
+        var y= new String(" This ");
+        console.log(y);
+        document.getElementById('content').innerHtml = '<h3> this is an h3 heading</h3>'
+    </script>
+</body>     
+</html>

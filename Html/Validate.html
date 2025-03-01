@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Form</title>
+    <link rel="stylesheet" href="styleform.css">
+</head>
+
+<body>
+
+    <br>
+    <form action="" name="form" onsubmit="return validate()" method="post">
+        <fieldset>
+            <legend>
+                Form
+            </legend>
+            <div class="formdesign">
+                Name:<input type="name" name="name" >
+            </div>
+            <br>
+            <div class="formdesign">
+                E-mail:<input type="email" name="email" required>
+            </div>
+            <br>
+            <div class="formdesign" id="pass">
+                Password:<input type="password" name="password" required>
+            </div>
+            <br>
+            <input type="submit" value="submit">
+        </fieldset>
+
+    </form>
+
+    <script >
+function seterror(id, error) {
+            //set error inside tag of id
+            element = document.getElementById(id);
+            element.getElementsByClassName('formerror')[0].innerhtml = error; //formerror class hai uski innnerhtml ko error ke barabr set kr do
+        }
+
+        function validate(){
+    var name=document.form.name.value;
+    var email=document.form.email.value;
+    var password=document.form.password.value;
+
+    if(name==null || name=="")
+    {
+        console.log("Blank")
+        alert("Name can't be balnk");
+        return false;
+    }
+    else if(password.length<6){
+        seterror("name","name should be atleast 6 character")
+        console.log("password must be atleast 6 characters");
+        alert("password must be atleast 6 characters");
+        return false;
+    }
+    return true;
+}
+    </script>
+</body>
+
+</html>

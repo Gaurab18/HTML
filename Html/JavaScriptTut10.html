@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date and Time</title>
+</head>
+<body>
+    <div class="container">
+        This is date tutorial
+    </div>
+
+    <script>
+    let now=new Date(); //date constructor
+    console.log(now)
+   
+    // let newDate = new Date("2019-09-30")
+    // console.log(newDate)
+
+
+        // let newDate = newDate(year,month,date,hours ,minutes,seconds,miliseconds)
+        let newDate=new Date(3020,10,31,12,20,3,30,3000)    
+        console.log(newDate)
+
+    let dat=newDate.getDate();
+    console.log("The date is" , dat)
+
+    let month=newDate.getMonth();
+    console.log("The month is",month);
+
+    let year=newDate.getFullYear()
+    console.log("The year is ",year)
+
+    let hours=newDate.getHours()
+    console.log("Hour is ",hours)
+
+    newDate.setDate(5)
+    console.log(newDate)
+
+    let daty=Date.now()
+    console.log(daty)
+
+    </script>
+</body>
+</html>

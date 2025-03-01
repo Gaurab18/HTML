@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Prompt Confirm</title>
+
+</head>
+<body>
+    <div class="container">
+        This is a Interactive Page
+    </div>
+
+    <script>
+     //alert is in browser-javascript .It does not return any value .
+     // let a=alert("Aleret doesn't return any value . It return undefined")
+       
+    //  alert("This is a message");
+    //  let name= prompt("What is your name?", "Guest") // guest is used as a default msg
+    //  let name1=prompt("What is your name ")
+    //  console.log(name1)
+    // let no=prompt("Enter a number");
+    // no=no*2;
+    // console.log(no);
+
+    // let deletePost = confirm("Do You really want to delete this post ?")
+    // // console.log(deletePost)
+    // if(deletePost){
+    //     console.log("Your post has been deleted successfully")
+    // }
+    // else{
+    //     console.log("Your Post has not been deleted")
+    // }
+
+    var number=parseInt(prompt("Enter a Number"));
+    var fact=1;
+    for(var i=2;i<=number;i++){
+        fact*=i;
+    }
+
+    alert("The factorial of " + number +"is" + fact);
+    </script>
+</body>
+</html>

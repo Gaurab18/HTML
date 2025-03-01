@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval and SetTimeOut</title>
+</head>
+<body>
+    <div class="container">
+      Time Now is <span id="time"></span>
+    </div>
+
+    <script>
+        console.log("This is SetInterval and SetTimeout Tutorial !")
+
+        //setinterval-allows us to run the fnc once after the interval of time.
+        //settimeout--allows us to run the fnc repeatedly after time.
+
+        function greet(name, byetext){
+            // console.log("Helllo Good Morning " + name)
+            console.log("hello " + name + byetext);
+        }
+ 
+        //  setTimeout(greet, 5000 ,'Gaurab');  //5000ms =5sec
+        // setTimeout(greet,4000,'asd','Take care')
+
+        // setInterval(greet,1000,'asd','gn');
+        // intervalId=setInterval(greet,1000,'asd','gn');
+        // clearInterval(intervalId);
+ 
+        //display time after 2 sec
+        function displayTime(){
+            time= new Date();
+            console.log(time)
+            document.getElementById('time').innerHTML= time;
+        }
+        setInterval(displayTime,2000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope and Conditionals</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+        </ul>
+    </div>
+    <script>
+        var str1="This is Scope Tutorial"
+        var str1="Var datatype can be replaced so we use let "
+        console.log(str1);
+       
+        //let have scope of block level . so if we use it inside {},if statement its value cant be accessed outside of them
+       let str='Alpha'
+       {
+        let str='Beta'
+        console.log(str)
+       }
+       console.log(str)
+
+       //const - it cant be changed .
+       const a="This can't be changed"
+       console.log(a)
+    //    { //cant be changed
+    //     a="Can u change"
+    //     console.log(a)
+    //    }
+
+      //if else
+        let age=6
+
+        if(age>5)
+        {
+            console.log("Age is 5")
+        }
+        else if(age==2)
+        {
+            console.log("Age is 2")
+        }
+        else{
+            console.log("Age not found")
+        }
+
+        //switch
+        //if no break it runs all statement after the case that is being checked 
+        const cups=40
+        //if case match then it stop
+        switch(cups)
+        {
+            case 1:
+                console.log("Cup is not Found")
+                break;
+            case 40:
+                console.log("Cups is Found")
+                break;
+            case 41:
+                console.log("Keep it Up ! Cups can be found .")
+                break;
+            default:
+                console.log("Try Again")
+                break;
+        }
+
+    </script>
+</body>
+</html>
